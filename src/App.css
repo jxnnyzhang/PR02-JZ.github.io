@@ -12,18 +12,24 @@
 
 .header-content {
   display: flex;
-  justify-content: space-between; /* This will push the title and button to opposite ends */
+  justify-content: flex-start;
   align-items: center;
-  background-color: #106dd1; /* Blue header background */
+  background-color: #216bba; /* Blue header background */
   color: white;
+  width: 100%;
   padding: 16px 30px; /* Adjust padding as needed */
 }
 
 .header-title {
-  font-size: 15px; /* Adjust if needed */
+  font-size: 20px; /* Adjust if needed */
   color: white;
   flex-grow: 1;
   text-align: center;
+}
+
+.menu-icon {
+  color: white;
+  margin-right: 5px;
 }
 
 .add-button {
@@ -31,6 +37,7 @@
   background-color: #1573d6; /* Button background color */
   color: white;
   border-radius: 3px;
+  width: 100px;
   padding: 10px 20px; /* Adjust padding to ensure proper spacing */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Shadow for the button */
   text-transform: none; /* Prevents capitalization of button text */
@@ -69,12 +76,19 @@
   border-radius: 0; /* This removes the rounded corners */
 }
 
+.MuiTableCell-root {
+  margin-top: 5px; /* Adjust as needed */
+  margin-bottom: 5px; /* Adjust as needed */
+}
+
 /* To ensure that the header cells do not have rounded corners */
 .MuiTableCell-head {
   border-radius: 0;
 }
 
-/* App.css */
+.MuiTableCell-body {
+  vertical-align: middle;
+}
 
 .MuiDialogTitle-root {
   background-color: #106dd1; /* Match the header color */

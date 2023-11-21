@@ -3,11 +3,12 @@ import {
   Dialog, DialogTitle, DialogContent, DialogActions, TextField, Button, RadioGroup, FormControlLabel, Radio
 } from '@mui/material';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
-import EditIcon from '@mui/icons-material/Edit';
+import EditIcon from '@mui/icons-material/EditNote'; // Assuming EditNote is the pencil on notepad icon
 import BlockIcon from '@mui/icons-material/Block';
+import CancelIcon from '@mui/icons-material/Cancel';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { LocalizationProvider } from '@mui/x-date-pickers';
-import { AdapterDateFns } from '@date-io/date-fns';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 
 const TaskDialog = ({ open, onClose, task, onSave, onDelete }) => {
   const [title, setTitle] = useState('');
@@ -111,7 +112,7 @@ const TaskDialog = ({ open, onClose, task, onSave, onDelete }) => {
       </DialogContent>
       <DialogActions>
         {task && (
-          <Button onClick={() => onDelete(task)} color="error" startIcon={<DeleteIcon />}>
+          <Button onClick={() => onDelete(task)} color="error" startIcon={<CancelIcon />}>
             Delete
           </Button>
         )}
