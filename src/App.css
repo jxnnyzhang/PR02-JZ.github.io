@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: 0; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.table-header {
+  background-color: #106dd1; /* Blue header background */
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.header-content {
+  display: flex;
+  justify-content: space-between; /* This will push the title and button to opposite ends */
+  align-items: center;
+  background-color: #106dd1; /* Blue header background */
+  color: white;
+  padding: 16px 30px; /* Adjust padding as needed */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header-title {
+  font-size: 15px; /* Adjust if needed */
+  color: white;
+  flex-grow: 1;
+  text-align: center;
 }
+
+.add-button {
+  margin-left: auto; /* This will push the button to the right */
+  background-color: #1573d6; /* Button background color */
+  color: white;
+  border-radius: 3px;
+  padding: 10px 20px; /* Adjust padding to ensure proper spacing */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Shadow for the button */
+  text-transform: none; /* Prevents capitalization of button text */
+}
+
+
+/* Styles for individual column header cells */
+.table-subheader > th {
+  text-align: center; /* Centers the text horizontally */
+  padding: 20px 10px; /* Top and bottom padding 20px, left and right padding 10px */
+  border-bottom: 1px solid rgba(224, 224, 224, 1); /* Solid line for separation */
+}
+
+/* Adjusts the row style to prevent overlap */
+.table-row {
+  border-bottom: 1px solid #e0e0e0; 
+}
+
+/* Hover effect for the button */
+.add-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Styles for the icon within the button */
+.add-button .MuiButton-startIcon {
+  margin-top: -1px;
+  margin-right: 2px; /* Space between the icon and the text */
+}
+
+.MuiPaper-root {
+  border-radius: 0; /* This removes the rounded corners */
+}
+
+/* If you also want to remove the rounded borders from the table rows */
+.MuiTableRow-root {
+  border-radius: 0; /* This removes the rounded corners */
+}
+
+/* To ensure that the header cells do not have rounded corners */
+.MuiTableCell-head {
+  border-radius: 0;
+}
+
+/* App.css */
+
+.MuiDialogTitle-root {
+  background-color: #106dd1; /* Match the header color */
+  color: white; /* Text color for the title */
+}
+
+.MuiDialogActions-root {
+  padding: 8px 24px; /* Adjust the padding as necessary */
+}
+
+.MuiButton-root {
+  margin-left: 4px; /* Ensure buttons are not touching */
+}
+
+/* Style for the error message */
+.MuiFormHelperText-root.Mui-error {
+  color: #f44336; /* Red color for error messages */
+}
+
+/* Override styles for Radio buttons if necessary */
+.MuiRadio-root {
+  color: #106dd1; /* Adjust the color to match your theme */
+}
+
+/* Override the TextField border color when error is present */
+.MuiOutlinedInput-root.Mui-error .MuiOutlinedInput-notchedOutline {
+  border-color: #f44336; /* Red border for error */
+}
+
